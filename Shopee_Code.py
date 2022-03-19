@@ -3,6 +3,9 @@ print("Hello world")
 #Q2
 import itertools
 
+n = int(input())
+bar = list(map(int,input().strip().split()))[:n]
+
 def weld(bar):
     possible = []
     for i in range(len(bar)):
@@ -18,3 +21,5 @@ def weld(bar):
         return 0                
     else:
         return max(possible)
+
+print(weld(bar))
